@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Methodology}{7}{0}{2}
+\beamer@sectionintoc {3}{Data}{9}{0}{3}
+\beamer@sectionintoc {4}{DFM extraction}{18}{0}{4}
+\beamer@sectionintoc {5}{Uncertainty extraction}{22}{0}{5}
+\beamer@sectionintoc {6}{SVAR}{26}{0}{6}
+\beamer@sectionintoc {7}{Conclusions}{31}{0}{7}

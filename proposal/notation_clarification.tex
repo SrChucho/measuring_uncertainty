@@ -1,0 +1,69 @@
+% ============================================
+% OPTION 3: Clarifying Footnote/Note
+% Add this to your document where needed
+% ============================================
+
+% Version A: As a footnote (add after first use of either η)
+% In main.tex, after equation with labor disutility:
+
+\textbf{Labor disutility}:
+\begin{equation}
+    v(\ell) = \chi \frac{\ell^{1+\eta}}{1+\eta}
+\end{equation}
+where $\chi$ is the scale parameter and $\eta = 1/\text{Frisch}$ is the inverse Frisch elasticity.\footnote{Note on notation: We use $\eta$ for the inverse Frisch elasticity (a preference parameter) in this section. In the Appendix (full HANK model), $\eta_{i,t}$ denotes the Lagrange multiplier for the cash-in-advance constraint. These are distinct objects, and the context makes clear which is referenced.}
+
+
+% ============================================
+% Version B: As a separate notation box
+% Add this at the beginning of your document or appendix
+% ============================================
+
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{Notation Clarification:}
+
+This document uses the symbol $\eta$ in two distinct contexts:
+
+\begin{enumerate}
+    \item \textbf{Preference parameter} (Sections 2-3): $\eta = 1/\text{Frisch}$ denotes the inverse of the Frisch elasticity of labor supply in the utility function $v(\ell) = \chi \frac{\ell^{1+\eta}}{1+\eta}$.
+
+    \item \textbf{Lagrange multiplier} (Appendix): $\eta_{i,t}$ denotes the household-specific Lagrange multiplier associated with the cash-in-advance constraint in the full HANK model.
+\end{enumerate}
+
+These are separate mathematical objects. The preference parameter $\eta$ is a time-invariant scalar, while $\eta_{i,t}$ is a time-varying, household-specific endogenous variable.
+\end{minipage}}
+\end{center}
+
+
+% ============================================
+% Version C: Inline clarification in the appendix
+% Modify the line in hank_model_equations.tex:
+% ============================================
+
+where $\eta_{i,t}$ is the Lagrange multiplier associated with the cash-in-advance constraint. \emph{Notation: Here $\eta_{i,t}$ represents a Lagrange multiplier (shadow price), distinct from the preference parameter $\eta$ used for the inverse Frisch elasticity in the labor disutility function elsewhere in this document.}
+
+
+% ============================================
+% Version D: Add to both locations
+% ============================================
+
+% In main.tex after the labor disutility equation:
+where $\chi$ is the scale parameter and $\eta = 1/\text{Frisch}$ is the inverse Frisch elasticity.$^*$
+
+\vspace{0.2cm}
+\noindent $^*$\footnotesize{Not to be confused with $\eta_{i,t}$, the Lagrange multiplier in the Appendix.}
+
+% In hank_model_equations.tex after the KKT conditions:
+where $\eta_{i,t}$ is the Lagrange multiplier associated with the cash-in-advance constraint.$^{\dagger}$
+
+\vspace{0.2cm}
+\noindent $^{\dagger}$\footnotesize{Not to be confused with $\eta$, the inverse Frisch elasticity parameter.}
+
+
+% ============================================
+% RECOMMENDATION:
+% ============================================
+
+% Use Version B (notation box) at the start of Section 2 in main.tex
+% This provides upfront clarity without cluttering individual equations
+% and makes the distinction explicit for readers.

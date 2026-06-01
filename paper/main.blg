@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Illegal, another \bibstyle command---line 144 of file main.aux
+ : \bibstyle
+ :          {apalike}
+I'm skipping whatever remains of this command
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: references.bib
+Warning--I didn't find a database entry for "baker"
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 13 entries,
+            6951 wiz_defined-function locations,
+            1366 strings with 13448 characters,
+and the built_in function-call counts, 22797 in all, are:
+= -- 2781
+> -- 192
+< -- 1056
++ -- 1049
+- -- 31
+* -- 1484
+:= -- 4177
+add.period$ -- 53
+call.type$ -- 13
+change.case$ -- 221
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 588
+empty$ -- 950
+format.name$ -- 310
+if$ -- 4362
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 0
+newline$ -- 325
+num.names$ -- 104
+pop$ -- 378
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 1506
+stack$ -- 0
+substring$ -- 1137
+swap$ -- 382
+text.length$ -- 28
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1040
+warning$ -- 0
+while$ -- 111
+width$ -- 0
+write$ -- 400
+(There was 1 error message)

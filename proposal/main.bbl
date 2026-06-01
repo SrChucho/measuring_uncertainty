@@ -1,0 +1,222 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Adrian%
+, Boyarchenko%
+\BCBL {}\ \BBA {} Giannone%
+}{%
+Adrian%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+adrian2019vulnerable}
+\APACinsertmetastar {%
+adrian2019vulnerable}%
+\begin{APACrefauthors}%
+Adrian, T.%
+, Boyarchenko, N.%
+\BCBL {}\ \BBA {} Giannone, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Vulnerable growth} {Vulnerable growth}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{American Economic Review}{109}{4}{1263--1289}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Adrian%
+, Grinberg%
+, Liang%
+, Malik%
+\BCBL {}\ \BBA {} Yu%
+}{%
+Adrian%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Adrian2022TermStructure}
+\APACinsertmetastar {%
+Adrian2022TermStructure}%
+\begin{APACrefauthors}%
+Adrian, T.%
+, Grinberg, F.%
+, Liang, N.%
+, Malik, S.%
+\BCBL {}\ \BBA {} Yu, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Term Structure of Growth-at-Risk} {The term
+  structure of growth-at-risk}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{American Economic Journal:
+  Macroeconomics}{14}{3}{283--323}.
+\newblock
+\begin{APACrefURL} \url{https://libkey.io/10.1257/mac.20180428}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1257/mac.20180428} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Federal Reserve Bank of Philadelphia}%
+}{%
+{Federal Reserve Bank of Philadelphia}%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+philadelphiafed_spf_q4_2025}
+\APACinsertmetastar {%
+philadelphiafed_spf_q4_2025}%
+\begin{APACrefauthors}%
+{Federal Reserve Bank of Philadelphia}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+\APACrefbtitle {Fourth Quarter 2025 {Survey of Professional Forecasters}}
+  {Fourth quarter 2025 {Survey of Professional Forecasters}}\ \APACbVolEdTR
+  {}{Survey}.
+\newblock
+\APACaddressInstitution{}{Federal Reserve Bank of Philadelphia}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/spf-q4-2025}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Accessed: April 10, 2026}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ferrara%
+, Mogliani%
+\BCBL {}\ \BBA {} Sahuc%
+}{%
+Ferrara%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Ferrara2022HFmonitoring}
+\APACinsertmetastar {%
+Ferrara2022HFmonitoring}%
+\begin{APACrefauthors}%
+Ferrara, L.%
+, Mogliani, M.%
+\BCBL {}\ \BBA {} Sahuc, J\BHBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {High-frequency monitoring of growth at risk}
+  {High-frequency monitoring of growth at risk}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Forecasting}{38}{2}{582-595}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S0169207021001102}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.ijforecast.2021.06.010}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+González-Rivera%
+, Rodríguez-Caballero%
+\BCBL {}\ \BBA {} Ruiz%
+}{%
+González-Rivera%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+GonzalezRivera2024ExpectingUnexpected}
+\APACinsertmetastar {%
+GonzalezRivera2024ExpectingUnexpected}%
+\begin{APACrefauthors}%
+González-Rivera, G.%
+, Rodríguez-Caballero, C\BPBI V.%
+\BCBL {}\ \BBA {} Ruiz, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Expecting the Unexpected: Stressed Scenarios for
+  Economic Growth} {Expecting the unexpected: Stressed scenarios for economic
+  growth}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Econometrics}{39}{5}{926--942}.
+\newblock
+\begin{APACrefURL} \url{https://libkey.io/10.1002/jae.3060} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1002/jae.3060} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Instituto Nacional de Estadística y Geografía (INEGI)}%
+}{%
+{Instituto Nacional de Estadística y Geografía (INEGI)}%
+}{%
+{\protect \APACyear {2026}}%
+}]{%
+inegi_gdp_quarterly_2026}
+\APACinsertmetastar {%
+inegi_gdp_quarterly_2026}%
+\begin{APACrefauthors}%
+{Instituto Nacional de Estadística y Geografía (INEGI)}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2026}{}{}.
+\newblock
+\APACrefbtitle {Producto {I}nterno {B}ruto Trimestral, Base 2018: Serie
+  Desestacionalizada a Precios de 2018, Total.} {Producto {I}nterno {B}ruto
+  trimestral, base 2018: Serie desestacionalizada a precios de 2018, total.}
+\newblock
+\begin{APACrefURL}
+  \url{https://inegi.org.mx/app/indicadores/?tm=3#D736181_600609}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Series calculadas por métodos econométricos a partir de las
+  cifras generadas por el Sistema de Cuentas Nacionales de México.
+  Periodicidad trimestral, millones de pesos a precios de 2018. Última
+  actualización: 23 de febrero de 2026. Accessed: April 10, 2026}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ludvigson%
+, Ma%
+\BCBL {}\ \BBA {} Ng%
+}{%
+Ludvigson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+ludvigson2021uncertainty}
+\APACinsertmetastar {%
+ludvigson2021uncertainty}%
+\begin{APACrefauthors}%
+Ludvigson, S\BPBI C.%
+, Ma, S.%
+\BCBL {}\ \BBA {} Ng, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Uncertainty and business cycles: exogenous impulse or
+  endogenous response?} {Uncertainty and business cycles: exogenous impulse or
+  endogenous response?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{American Economic Journal:
+  Macroeconomics}{13}{4}{369--410}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

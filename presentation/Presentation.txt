@@ -1,0 +1,87 @@
+Presentation: 
+
+UI effects on job quality: the role of job composition channel
+
+Section 1: research question
+
+\begin{boxed}
+What is the effect of UI duration on job quality --- measured by wages as a proxy for productivity---?
+\end{boxed}
+
+Mechanism: Under risk averse workers: a modest level of UI allow workers to apply for vacancies with high unemployment probability. In anticipation, firms respond by posting higher-wages vacancies to attract workers and maximize profits (A\&S 1999, 2000).
+
+Corollary: a cut in UI weakens workers' outside options, reducing the incentive for firms to post high-wage vacancies, potentially shifting hiring composition toward lower-wage sectors.
+
+why this is important?
+\begin{itemize}
+\item UI is an essential part of US safety net, the bottom part of the distribution rely on UI, SS, and Medicare
+\item UI is one of the key macroeconomic stabilizer, expenditure can increase from 1\% to 5\% during economic throughs
+\item UI changes incentives and trade-offs between insurance and work incentives
+\end{itemize}
+
+Section 2: What has been done before?
+\begin{itemize}
+\item Large tradition on microeconomic studies to investigate individual channel e.g. Farber and Valleta (2015):
+\begin{itemize}
+\item Moral Hazard: delay job search due to increased value of outside option.
+\item Selectivity: increased reservation wage, subsidize job search.
+\end{itemize}
+\textcolor{blue}{Gap: do not look at the firm's response and market labor outcomes.}
+\item Recent developments on macroeconomic effects
+\begin{itemize}
+\item \textbf{Job creation:}  KMM (2025) Missouri reform increases \textit{job finding rate}, decomposed into search effort and market tightness.
+\item \textbf{Market tightness:} HMM (2025) UI extensions reduce vacancy creation and employment via tightness channel.
+\end{itemize}
+\textcolor{blue}{[Gap:] Mainly concerned on effects on quantity margin (employment, unemployment duration, job finding rates) but not the quality margin.}
+\item Mostly related to
+\begin{itemize}
+\item Acemoglu \& Shimer (1999, 2000). Calibrate a macro model to test hypothesis. \textcolor{blue}{[Gap: do not use causal identification, two sectors: good jobs have wages 1.3x bad jobs]}
+\item Nekoei \& Weber (2017). Use individual data for the case of Austria. \textcolor{blue}{[Gap: identifies worker selectivity margin at a specific eligibility threshold, not an aggregate equilibrium effect]}
+\end{itemize}
+\end{itemize}
+
+
+Section 3: Research strategy
+\begin{itemize}
+\item \textbf{Empirical design:} DiD and Synthetic control using Missouri HB163 (April 2011), an exogenous legislative change to UI duration unrelated to labor market conditions.
+\item \textbf{Measurement:} Wage decomposition between-sector (composition) and within-sector (wages) components, following Foster, Haltiwanger and Krizan (2001).
+\item \textbf{Wages as job quality:} wages usually correlate with productivity, better working conditions and stability in jobs. In A\&S firms choose \textbf{wages and specificity}, but they proof that at equilibrium specificity is pinned down by wages.
+
+\item \textbf{Window of study:} 2010Q1 to 2013Q2. Longer previous window confound with GR effects (ends 2009Q2 NBER). Longer post window confound with other changes to labor markets and end of EUC at the end of 2013. 
+\end{itemize}
+
+
+Slide 3.1: Missouri
+\begin{itemize}
+\item Legislative delay on extension of benefits for long-term unemployed (with $>$ than 18 months jobless)
+\item Chronology of bill: 
+\begin{itemize}
+\item 1/11/2011 - Introduced and Read First Time (no mention of reduction of PBD)
+\item 3/1/2011 - Senate Substitute, no footprint of PBD changes
+\item 4/7/2011 - Senate Amendment, introduce change ''[twenty-six] twenty weeks''
+\item 4/13/2011 - Truly Agreed signed with change
+\end{itemize}
+
+Anticipation window limited to April 7-13, to short for meaningful response by firms or workers.
+
+\end{itemize}
+
+Slide 3.2 Data and EDA
+Plot of wages decomposition, comment on parallel trends.
+
+Section 4: Results
+Slide 4.1 Preliminary results. 
+
+Slide 4.2 Preliminary results
+
+Section 5: What is missing
+\begin{itemize}
+\item Incorporate effect of take-up rate (79\% Missouri vs 67\% Rest of US) and Fraction of Unemployed Eligible (68\% vs 55\%, respectively). Note that these rates are obtained with SIPP---a non-state-representative survey. 
+\item Conduct robustness checks: Placebo reform in other years. Alternative reform effects 2011Q1 vs 2011Q2.
+\end{itemize}
+
+Future directions
+\begin{itemize}
+\item The lower the UI claims, the lower the payroll tax base for employers. Investigate the effects of UI-state-trust health into JC.
+\item Investigate this results using a calibrated directed search model following 
+\end{itemize}

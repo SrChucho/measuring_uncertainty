@@ -1,0 +1,88 @@
+
+Motivation: 
+-------------
+Alan Greenspan observed, "Uncertainty is not just an important feature of the monetary policy landscape; it is the defining characteristic of that landscape" (Greenspan, 2003).
+
+Effects of heightened uncertainty: more dispersion and negative skewed future growth distribution; non-linear and asymmetric responses to uncertainty; higher asset volatility. 
+
+Monetary policy conducts balance of risks weighing downside risks ---production, unemployment--- and upside risks--- inflation, to determine the entire probability distribution. 
+
+Measuring Uncertainty: 
+--------------------
+Some concepts of uncertainty in the literature: 
+EPU - (Baker, Bloom and Davis) How uncertainty is the Policy Environment that HH and firms face.
+VIX - How much financial markets expect asset prices to fluctuate
+JLN - (Jurado, Ludvigson and Ng) How unpredictable in macroeconomy
+LMN - (Ludvigson, Ma and Ng) What are the roles of \textbf{macroeconomic} and \textbf{financial} uncertainty
+
+
+Literature: 
+-----------------------
+Adrian, Boyarchenko and Gianone (2019). Propose a methodology to deetermine' what is the \texit{what is the worst GDP outcome that we should expect with given proability?}
+Salgado and Trujillo (2025). How macroeconomic uncertainty using the Financial Conditions Index (Carrillo and Garcia, 2021) affects growth expectations.
+Catalan (2019) How uncertainty shocks from EPU affect prices (interest rates, wages) and, consequently, econonomic activity (investment and employment).
+Cebreros (2000) How trade policy uncertainty affects FDI.
+
+
+Research question: what role does macroeconomic and financial uncertainty play in the determination of growth expectation of the Mexican economy?
+
+contribution: combine methodologies for the Mexican economy 
+
+
+Methodology:
+------------
+1. Estimate common trends to the Mexican economy, following Coronal et al (2020)\footnote{available at https://github.com/FranciscoL-B/ioae_assesment/}. They develop a panel of 26 variables that are used to nowcast Mexican monthly economic activity indicator (IGAE).
+
+2. Compute \textit{macro} uncertainty, MU, and \textit{financial} uncertainty, FU, indicators as the unforseable component of economic variables after extracting all common predictable variation in the DFM.
+
+3. Estimate a SVAR to identify causal direction between MU, FU and economic activity. 
+
+4. Estimating the entire conditional distribution of growth for evaluating uncertainty’s impact in the Mexican economy.
+
+Model
+----------------------
+Formally, let \mathbf{X}_t be the set of data, we estimate the DFM as
+\begin{equation}\label{eqDFM}
+\mathbf{X}_t=\mathbf{P} \mathbf{F}_t + \boldsymbol{\varepsilon}_t,
+\end{equation}
+We then extract the idiosyncratic component as
+e_it = x_it − F_t′λ_i  
+Using JLN estimate GARCH(1,1) per variable \rightarrow \sigma_it, and build 
+MU_t = mean{ σ_it : i ∈ Macro }      (standardised)
+FU_t = mean{ σ_it : i ∈ Financial }  (standardised)
+
+Then, estimate SVAR: VAR([MU, FU, IGAE_growth])
+       Ordering A: MU → FU → IGAE  (LMN baseline)
+       Ordering B: FU → MU → IGAE  (robustness)
+
+
+
+Data
+----------------
+The time series are of monthly frequency, starting from January 2004, with some available through January 2025. All variables have been obtained in seasonally adjusted form; if not, they have been adjusted using the X-13ARIMA-SEATS method. This seasonal adjustment relies on the automatic modeling procedure implemented in the \verb|seas| function from R’s \verb|seasonal| package. Table~\ref{TabVar} provides a summary of the dataset, including information on each variable’s availability up to $T+1$ and/or $T+2$, as well as the optimal transformation applied.
+
+
+plot igae in levels, annual and monthly variation
+plot igae_mv against each of the variables 
+
+make unit root tests ot IGAE in levels and in monthly variations
+
+test IGAE for structural break on 2009/05  and 2020/05 (Mexican dating committee)
+test IGAE for endogenous break using Quah Andrews test 
+
+Cointegration 
+--------------------
+using the data in levels estimate DFM, then from the extracted factors identify at least one is non-stationary, then verify that the residuals are stationary, thus the DFM is cointegrated. 
+
+SVAR
+------------
+estimate the SVAR with the methodology of LMN
+- establish what are the Short-run restrictions
+- establish what are the long-run restrictions
+
+
+
+
+
+
+
