@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>analysis_notes.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="lmn-uncertainty-indices-for-mexico--analysis-notes">LMN Uncertainty Indices for Mexico — Analysis Notes</h1>
+<p><strong>Script:</strong> <code>scripts/01_jln_lmn_methodology.R</code><br>
+<strong>Sample:</strong> 2005/01 – present (DFM panel starts 2004/01; first 12 rows dropped by annual transformation)<br>
+<strong>Last run:</strong> with INPC restored to MACRO_VARS<br>
+<strong>Data:</strong> 253 obs × 27 variables, 2004/01 – 2025/01</p>
+<hr>
+<h2 id="1-methodology-in-brief">1. Methodology in brief</h2>
+<p>The pipeline follows Jurado, Ludvigson &amp; Ng (2015) — JLN — and Ludvigson, Ma &amp; Ng (2021) — LMN — applied to the Mexican monthly macro-financial panel from Corona et al.</p>
+<pre class="hljs"><code><div>Raw panel (35 variables, 2004/01–present)
+  │
+  ├─ Seasonal adjustment: X-13 via seas()
+  ├─ Stationarity: best_trans() — linear / monthly / annual growth
+  │
+  ▼
+Scaled panel X  [T × N]
+  │
+  ├─ Bai-Ng IC → r = 7 factors
+  ├─ DFM via nowcast() method=&quot;2s&quot;
+  │     fhat  [T × r]  common factors
+  │     Phat  [N × r]  loadings
+  │
+  ▼
+Idiosyncratic residual   e_it = x_it − F_t′λ_i   [T × N]
+  │
+  ├─ GARCH(1,1) per variable → σ_it  [T × N]
+  │
+  ▼
+MU_t = mean{ σ_it : i ∈ Macro }      (standardised)
+FU_t = mean{ σ_it : i ∈ Financial }  (standardised)
+  │
+  └─ Proxy SVAR: VAR([MU, FU, IGAE_growth])
+       Ordering A: MU → FU → IGAE  (LMN baseline)
+       Ordering B: FU → MU → IGAE  (robustness)
+</div></code></pre>
+<p><strong>Key conceptual distinction:</strong> uncertainty here is the conditional volatility of the <em>unforecastable</em> component. The DFM strips out all predictable common variation first; GARCH then captures time-varying unpredictability in what remains. This differs from VIX (options-implied vol) and EPU (text-based), both of which conflate uncertainty with risk aversion or media salience.</p>
+<hr>
+<h2 id="2-variable-groups">2. Variable groups</h2>
+<h3 id="macro-variables--mu--20-variables-after-catalog-filtering">Macro variables → MU  (20 variables after catalog filtering)</h3>
+<table>
+<thead>
+<tr>
+<th>Mexican real activity</th>
+<th>External / US</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_EMP_MAN, ISBSVM, IAI, X, M, TDU</td>
+<td>U_US, MANUF_USA, IPI_EUA</td>
+</tr>
+<tr>
+<td>REMESAS, ANTAD, GASOLINAS, PROD_VEH</td>
+<td></td>
+</tr>
+<tr>
+<td>INPC, CONF_CONS, CONF_MAN, PEDIDOS_MANU</td>
+<td></td>
+</tr>
+<tr>
+<td>CONF_COM, CONF_SERV, IMSS, OCUP_HOT</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note on INPC:</strong> Restored to MACRO_VARS. Mexican inflation has historically been a major source of macroeconomic uncertainty (1980s–1990s hyperinflation episodes, 1994–95 crisis, 2021–22 supply shock). Its idiosyncratic share is ~0.87, meaning 87% of its variance is not captured by common factors — it contributes substantially to MU's time-varying signal.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note on GASOLINAS:</strong> Data starts ~2014. Values before 2014 are backward-filled with the first available observation (a necessary imputation for the balanced panel requirement of <code>nowcast()</code>). The GARCH σ_t for GASOLINAS should be interpreted cautiously before 2014.</p>
+</blockquote>
+<h3 id="financial-variables--fu--6-variables">Financial variables → FU  (6 variables)</h3>
+<p>IPC, SP_500, TC, TIIE_28, SPEI, TARJETAS</p>
+<blockquote>
+<p><strong>Note on TIIE_28:</strong> r² = 0.931 (93% explained by common factors), but σ_t range is 0.07–0.79 — meaningful time variation in the idiosyncratic residual. Retained in FU.</p>
+</blockquote>
+<h3 id="non-traditional--factors-only-excluded-from-mufu">Non-traditional → factors only, excluded from MU/FU</h3>
+<p>MOVILIDAD, SATELITES (if present in catalog)</p>
+<hr>
+<h2 id="3-factor-extraction-diagnostics">3. Factor extraction diagnostics</h2>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factors selected (Bai-Ng IC1 and IC2)</td>
+<td><strong>r = 7</strong> (both criteria agree)</td>
+</tr>
+<tr>
+<td>Panel variance explained</td>
+<td><strong>66.9%</strong></td>
+</tr>
+<tr>
+<td>Idiosyncratic share (panel-wide, median)</td>
+<td><strong>33.1%</strong></td>
+</tr>
+<tr>
+<td>Transformation breakdown</td>
+<td>23 monthly, 2 annual, 2 linear</td>
+</tr>
+<tr>
+<td>Seasonal adjustment applied</td>
+<td>9 variables</td>
+</tr>
+</tbody>
+</table>
+<p>Both IC1 and IC2 select r = 7 — no ambiguity in the factor count. 66.9% panel variance explained is in the healthy range for a monthly macro DFM (typical: 50–65%). The 7 factors capture the shared business cycle without absorbing idiosyncratic variation that the GARCH step needs.</p>
+<h3 id="variance-decomposition-by-variable-idiosyncratic-share">Variance decomposition by variable (idiosyncratic share)</h3>
+<p>The table below is ordered from most to least idiosyncratic. High values → large contribution to MU/FU.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>R² (common)</th>
+<th>Idio share</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INPC</td>
+<td>0.145</td>
+<td><strong>0.855</strong></td>
+<td>MU</td>
+</tr>
+<tr>
+<td>GASOLINAS</td>
+<td>0.318</td>
+<td>0.682</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>CONF_MAN</td>
+<td>0.358</td>
+<td>0.642</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>CONF_SERV</td>
+<td>0.436</td>
+<td>0.564</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>REMESAS</td>
+<td>0.444</td>
+<td>0.556</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>ANTAD</td>
+<td>0.447</td>
+<td>0.553</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>TARJETAS</td>
+<td>0.483</td>
+<td>0.517</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>SPEI</td>
+<td>0.492</td>
+<td>0.508</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>M</td>
+<td>0.572</td>
+<td>0.428</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>T_EMP_MAN</td>
+<td>0.576</td>
+<td>0.424</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>PEDIDOS_MANU</td>
+<td>0.612</td>
+<td>0.388</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>CONF_CONS</td>
+<td>0.645</td>
+<td>0.355</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>TC</td>
+<td>0.650</td>
+<td>0.350</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>SP_500</td>
+<td>0.669</td>
+<td>0.331</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>IPC</td>
+<td>0.698</td>
+<td>0.302</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>IMSS</td>
+<td>0.761</td>
+<td>0.239</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>ISBSVM</td>
+<td>0.779</td>
+<td>0.221</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>CONF_COM</td>
+<td>0.800</td>
+<td>0.200</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>TDU</td>
+<td>0.817</td>
+<td>0.183</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>IAI</td>
+<td>0.862</td>
+<td>0.138</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>IPI_EUA</td>
+<td>0.862</td>
+<td>0.138</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>PROD_VEH</td>
+<td>0.867</td>
+<td>0.133</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>X</td>
+<td>0.890</td>
+<td>0.110</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>MANUF_USA</td>
+<td>0.894</td>
+<td>0.106</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>OCUP_HOT</td>
+<td>0.922</td>
+<td>0.078</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>TIIE_28</td>
+<td>0.938</td>
+<td>0.062</td>
+<td>FU</td>
+</tr>
+<tr>
+<td>U_US</td>
+<td>0.951</td>
+<td>0.049</td>
+<td>MU</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key pattern:</strong> US labor market variables (U_US, MANUF_USA, IPI_EUA) have R² &gt; 0.78 — they load heavily on the common factors and contribute relatively little to MU's time-series dynamics. The uncertainty in MU is driven primarily by INPC, GASOLINAS, REMESAS, and the business-confidence survey block.</p>
+<hr>
+<h2 id="4-uncertainty-indices">4. Uncertainty indices</h2>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig1_mu_fu_indices.png" alt="MU and FU indices"></p>
+<p>Both indices are standardised (zero mean, unit variance). Peaks above +1 SD indicate elevated uncertainty episodes.</p>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig2_mu_fu_spread.png" alt="MU − FU spread"></p>
+<p><strong>Blue</strong> (MU &gt; FU): macro uncertainty dominates — supply/activity shocks, inflation episodes.<br>
+<strong>Orange</strong> (FU &gt; MU): financial uncertainty dominates — asset price and credit stress.</p>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig3_igae_vs_mu.png" alt="IGAE growth vs MU"></p>
+<p>IGAE monthly growth (bars) versus MU (line, right axis). Large MU spikes should precede or coincide with negative IGAE growth episodes.</p>
+<hr>
+<h2 id="5-svar-results">5. SVAR results</h2>
+<h3 id="lag-order-selection">Lag order selection</h3>
+<p>Selected by Schwarz criterion (SC), capped at 4 lags.</p>
+<h3 id="impulse-response-functions">Impulse response functions</h3>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig4_irfs.png" alt="IRFs under both orderings"></p>
+<p>90% bootstrap confidence bands, 500 replications. Two panels show how the IGAE response to MU and FU shocks changes under each Cholesky ordering. <strong>Ordering sensitivity is the key diagnostic</strong> — if the IGAE response to MU is very different across orderings, the identification is fragile and the full LMN rotation approach would be needed.</p>
+<h3 id="forecast-error-variance-decomposition--igae-growth-at-12-month-horizon">Forecast error variance decomposition — IGAE growth at 12-month horizon</h3>
+<table>
+<thead>
+<tr>
+<th>Ordering</th>
+<th>MU share</th>
+<th>FU share</th>
+<th>Own (IGAE) share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A: MU first (LMN baseline)</td>
+<td>0.008</td>
+<td>0.020</td>
+<td>0.972</td>
+</tr>
+<tr>
+<td>B: FU first (alternative)</td>
+<td>0.005</td>
+<td>0.023</td>
+<td>0.972</td>
+</tr>
+</tbody>
+</table>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig5_fevd.png" alt="FEVD at all horizons"></p>
+<p><strong>Interpretation:</strong> IGAE's own dynamics explain ~97% of its forecast error variance at 12 months. MU and FU together account for ~2.7%, which is small but consistent with several findings in the literature for small open economies. For Mexico, the dominant sources of output fluctuations are external demand shocks (US economy, oil prices) and domestic demand persistence — both absorbed into IGAE's autoregressive structure rather than into the uncertainty channel.</p>
+<p><strong>MU–FU correlation: 0.145</strong> — the two indices are nearly orthogonal, which is desirable: they are capturing genuinely distinct dimensions of uncertainty rather than the same underlying phenomenon.</p>
+<p><strong>VAR lag order:</strong> SC selected p = 1 (AIC selected 4); the script uses SC capped at 4, giving p = 1.</p>
+<p><strong>Ordering sensitivity is mild:</strong> FU's share rises from 2.0% to 2.3% when it goes first, and MU falls from 0.8% to 0.5%. This suggests the two uncertainty channels are not cleanly causally ordered — motivating the full LMN rotation approach if causal identification is the primary goal.</p>
+<hr>
+<h2 id="6-dfm-factor-analysis">6. DFM Factor Analysis</h2>
+<p>The DFM extracts r = 7 common factors from the 27-variable panel. These factors capture shared macroeconomic dynamics that are <strong>removed</strong> from each series before the GARCH step — they are the predictable common component. Understanding what each factor represents helps verify that the idiosyncratic residuals (which feed MU and FU) contain genuine uncertainty rather than systematic signal.</p>
+<h3 id="factor-time-series">Factor time series</h3>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig7_factors_ts.png" alt="Factor time series"></p>
+<p>Seven panels show the time path of each factor over the 2005–2025 sample. All factors are sign-normalised so that F1 has positive correlation with IGAE growth. Peaks and troughs in the factor paths can be mapped to known economic events (2008–09 crisis, 2015–16 oil crash, 2020 COVID shock, 2022 inflation surge).</p>
+<h3 id="factor-loadings">Factor loadings</h3>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig8_loadings_heatmap.png" alt="Factor loadings heatmap"></p>
+<p>The heatmap shows how each variable loads onto each factor. Blue = positive loading, orange = negative. Variables are ordered from most idiosyncratic (top) to least (bottom), matching the variance decomposition table in Section 3.</p>
+<p><strong>Reading guide:</strong></p>
+<ul>
+<li>Variables with large absolute loadings on a factor drive that factor's movements.</li>
+<li>Variables near the top (high idiosyncratic share — INPC, GASOLINAS, confidence surveys) load weakly on all factors, which is why their uncertainty contribution is large: the factors don't absorb much of their variation.</li>
+<li>Variables near the bottom (U_US, MANUF_USA, IPI_EUA) load heavily on one or two factors, reflecting their tight coupling with the US business cycle.</li>
+</ul>
+<p><strong>Economic interpretation by factor (provisional — verify against top-5 loadings in run log):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Likely representation</th>
+<th>Key loading variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F1</td>
+<td>Mexican business cycle</td>
+<td>IMSS, ISBSVM, IAI, X, M — all real activity indicators</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>Financial/credit conditions</td>
+<td>IPC, SP_500, TC, TIIE_28 — asset prices and rates</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>US external demand</td>
+<td>MANUF_USA, IPI_EUA, U_US — US cycle co-movement</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>Consumer sentiment / confidence</td>
+<td>CONF_CONS, CONF_COM, CONF_SERV, ANTAD</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>Manufacturing / trade cycle</td>
+<td>PROD_VEH, T_EMP_MAN, PEDIDOS_MANU</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>Remittances / informal sector</td>
+<td>REMESAS, OCUP_HOT, TDU</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>Residual / structural breaks</td>
+<td>Variables with high idiosyncratic share loading on late-sample variation</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Important caveat:</strong> Factor labels are inferred from loadings and should be confirmed against the top-5 loadings table printed in the run log. Sign normalisation ensures F1 is cycle-aligned, but the other factors' signs are arbitrary.</p>
+</blockquote>
+<h3 id="variance-contribution-per-factor">Variance contribution per factor</h3>
+<p><img src="file:///c:/Users/jesus/OneDrive/Documentos/macroeconometrics/05_proposal/ioae_assesment/outputs/lmn/fig9_variance_contrib.png" alt="Variance contribution by factor"></p>
+<p>Bars show each factor's individual contribution to total panel variance; the orange line is the cumulative total. Because the two-step principal-components estimator extracts factors in descending eigenvalue order, F1 always has the largest share.</p>
+<p><strong>Key insight:</strong> The cumulative line reaching ~67% at F7 is the 66.9% panel variance explained figure reported in Section 3. The remaining ~33% is in the idiosyncratic residuals — this is the raw material for MU and FU. A DFM that explained 90% or more would leave too little idiosyncratic variation for GARCH to estimate meaningful conditional volatility dynamics.</p>
+<hr>
+<h2 id="7-implementation-notes-and-fixes-applied">7. Implementation notes and fixes applied</h2>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>igae_mv</code> length mismatch when <code>start = &quot;2004/01&quot;</code></td>
+<td>Trimmed <code>igae_mv</code> to <code>igae_mv[idx_start:length(igae_mv)]</code> after naming; used <code>c(igae_mv[13:length], NA)</code> for <code>yfcst_in</code></td>
+</tr>
+<tr>
+<td>Leading NAs in GASOLINAS, MOVILIDAD, SATELITES</td>
+<td>Backward fill (<code>zoo::na.locf(..., fromLast=TRUE)</code>) after forward fill</td>
+</tr>
+<tr>
+<td>Wrong <code>ts</code> start date (2004 instead of 2005)</td>
+<td><code>start = c(year_s + 1, 1)</code> — derived from <code>dates_trans[1]</code> after 12-row drop</td>
+</tr>
+<tr>
+<td>YFCST showed 3 NAs instead of 1</td>
+<td>Expected: 1 appended NA + 2 publication-lag NAs for IGAE (~2-month lag). Not a bug.</td>
+</tr>
+<tr>
+<td><code>dplyr::select</code> masked by <code>vars::select</code></td>
+<td>Qualified as <code>dplyr::select(-horizon)</code> in FEVD summary</td>
+</tr>
+<tr>
+<td>Duplicate <code>nowcast()</code> call</td>
+<td>Removed second call</td>
+</tr>
+<tr>
+<td><code>igae_growth_all</code> name-length mismatch in SVAR</td>
+<td>Replaced 3-line block with <code>igae_growth_svar &lt;- igae_mv[dates_fhat]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-next-steps">8. Next steps</h2>
+<ol>
+<li><strong>Robustness check:</strong> rerun with <code>rhat = bn_result$rhat[2]</code> (IC2, less conservative) and verify MU/FU correlation with baseline &gt; 0.85</li>
+<li><strong>GASOLINAS imputation check:</strong> plot <code>e_idio[, &quot;GASOLINAS&quot;]</code> and verify no structural break at 2014/01 contaminates the GARCH estimate</li>
+<li><strong>Full LMN identification:</strong> implement the 1.5M rotation matrix approach (max-share criterion) to move beyond Cholesky ordering — use <code>VARsignR</code> package</li>
+<li><strong>GaR integration:</strong> feed MU and FU into the quantile regression framework of Adrian et al. (2019) with GDP growth as the dependent variable</li>
+<li><strong>INPC robustness:</strong> compare MU with and without INPC to isolate the price-uncertainty component from real-activity uncertainty</li>
+</ol>
+
+</body>
+</html>

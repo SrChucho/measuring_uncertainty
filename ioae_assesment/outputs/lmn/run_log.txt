@@ -1,0 +1,81 @@
+Warning messages:
+1: package 'seasonal' was built under R version 4.3.3 
+2: package 'vars' was built under R version 4.3.3 
+3: package 'rugarch' was built under R version 4.3.3 
+4: package 'tidyverse' was built under R version 4.3.3 
+5: package 'tidyr' was built under R version 4.3.3 
+6: package 'patchwork' was built under R version 4.3.3 
+Data loaded: 253 observations × 27 variables (2004/01 – 2025/01)
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Seasonal adjustment applied to 9 variables.
+
+Transformation summary:
+
+ annual  linear monthly 
+      2       2      23 
+
+Bai-Ng factor selection: r = 7 (IC_p1)
+                         r = 7 (IC_p2)
+db_now dim:       241 28 
+YFCST NAs:        3 
+freq_now length:  28 
+rhat:             7 
+DFM extracted: 7 factors, 241 observations, 27 variables
+
+── Variance decomposition (common factors vs idiosyncratic) ──
+     variable r2_common idio_share
+         INPC     0.145      0.855
+    GASOLINAS     0.318      0.682
+     CONF_MAN     0.358      0.642
+    CONF_SERV     0.436      0.564
+      REMESAS     0.444      0.556
+        ANTAD     0.447      0.553
+     TARJETAS     0.483      0.517
+         SPEI     0.492      0.508
+            M     0.572      0.428
+    T_EMP_MAN     0.576      0.424
+ PEDIDOS_MANU     0.612      0.388
+    CONF_CONS     0.645      0.355
+           TC     0.650      0.350
+       SP_500     0.669      0.331
+          IPC     0.698      0.302
+         IMSS     0.761      0.239
+       ISBSVM     0.779      0.221
+     CONF_COM     0.800      0.200
+          TDU     0.817      0.183
+          IAI     0.862      0.138
+      IPI_EUA     0.862      0.138
+     PROD_VEH     0.867      0.133
+            X     0.890      0.110
+    MANUF_USA     0.894      0.106
+     OCUP_HOT     0.922      0.078
+      TIIE_28     0.938      0.062
+         U_US     0.951      0.049
+
+Median idiosyncratic share across variables: 33.1%
+
+Fitting GARCH(1,1) on idiosyncratic components...
+  Variable 10 / 27  Variable 20 / 27  Variable 27 / 27 — done.
+
+MU: mean = -0.000 | sd = 1.000 | n_series = 21
+FU: mean = -0.000 | sd = 1.000 | n_series = 6
+MU–FU correlation: 0.145
+
+VAR lag order: AIC = 4, SC = 1 → using p = 1
+
+── FEVD of IGAE growth at 12-month horizon ──
+Ordering A (MU first):
+     MU   FU igae_growth
+1 0.008 0.02       0.972
+Ordering B (FU first):
+     FU    MU igae_growth
+1 0.023 0.005       0.972
+
+Figures saved to outputs/lmn/
+
+Results saved:
+  outputs/rds/lmn/lmn_results.rds
+  outputs/lmn/lmn_uncertainty_indices.csv
+
+=== Done ===

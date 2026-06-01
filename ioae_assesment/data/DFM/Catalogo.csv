@@ -1,0 +1,38 @@
+﻿Short,Description,Large,Block,SA,IGAE,Avai_T2
+IAI,IMAI,"Indicadores económicos de coyuntura > Actividad industrial, base 2013 > Series Originales > Índice de volumen físico Total de la actividad industrial p1 / f2/ (Índice base 2013=100) ",Tradicional,0,1,0
+ISBSVM,Sales,"Indicadores económicos de coyuntura > Encuesta mensual sobre empresas comerciales (EMEC), Base 2013 > Series desestacionalizadas y tendencia-ciclo > Comercio al por menor > Ingresos por suministros de bienes y servicios > Índice general > Serie desestacionalizada Índice f3/ (Índice base 2013=100) ",Tradicional,0,1,0
+TDU,U,"Indicadores económicos de coyuntura > Tasas de ocupación, desocupación y subocupación (resultados mensuales de la ENOE, 15 años y más) > Series desestacionalizadas y tendencia-ciclo > Urbana, agregado de 32 ciudades > Tasa de desocupación > Total > Serie desestacionalizada Índice a/  f1/ (Porcentaje de la Población Económicamente Activa) ",Tradicional,0,1,0
+M,M,Sector externo > Resumen de la balanza comercial de mercancías de México Importaciones r1 / f4/ (Millones de dólares) ,Tradicional,0,1,0
+CONF_CONS,Conf Constr,Indicadores económicos de coyuntura > Encuesta mensual de opinión empresarial (EMOE). Serie 2013 > Sector construcción > Series desestacionalizadas y tendencia-ciclo > Indicador de confianza empresarial y sus componentes > Momento adecuado para invertir > Serie desestacionalizada Índice f1/ (Puntos) ,Tradicional,0,1,1
+CONF_MAN,Conf Manuf,Indicadores económicos de coyuntura > Encuesta mensual de opinión empresarial (EMOE). Serie 2013 > Sector manufacturero > Series desestacionalizadas y tendencia-ciclo > Indicador de confianza empresarial y sus componentes > Momento adecuado para invertir > Serie desestacionalizada Índice f1/ (Puntos) ,Tradicional,0,1,1
+CONF_COM,Conf Trade,Indicadores económicos de coyuntura > Encuesta mensual de opinión empresarial (EMOE). Serie 2013 > Sector comercio > Series desestacionalizadas y tendencia-ciclo > Indicador de confianza empresarial y sus componentes > Momento adecuado para invertir > Serie desestacionalizada Índice a/  f1/ (Puntos) ,Tradicional,0,1,1
+CONF_SERV,Conf Serv,Indicadores económicos de coyuntura > Encuesta mensual de opinión empresarial (EMOE). Serie 2013 > Sector servicios privados no financieros > Indicadores de opinión > Indicador de confianza empresarial por componentes y grupos de subsectores > Momento adecuado para invertir Total sector servicios privados no financieros b/  p1 / f2/ (Puntos) ,Tradicional,0,1,1
+T_EMP_MAN,Trend U Manuf,Indicadores económicos de coyuntura > Encuesta mensual de la industria manufacturera (EMIM). Base 2013 > Series desestacionalizadas y tendencia-ciclo > Personal ocupado > Personal ocupado total > total > Tendencia-ciclo Índice f3/ (Índice base 2013=100) ,Tradicional,0,1,0
+IPC,IPC,"Indice de precios y cotizaciones, Indice general",Alta frecuencia,0,1,1
+TC,E,"Índice de tipo de cambio interno en pesos por dólar, E, Cálculo del indice de tipo de cambio real",Alta frecuencia,0,1,1
+TIIE_28,IR 28,"TIIE a 28 días, Tasa de interés promedio mensual, en por ciento anual",Alta frecuencia,0,1,1
+SP_500,SP 500,NA,Alta frecuencia,0,1,1
+IPI_EUA,Industrial USA,Industrial Production Index (INDPRO),Tradicional,0,1,1
+ANTAD,ANTAD,"Indicantad > Ventas Totales, reconstruido con Variacion Anual",Tradicional,1,1,0
+PROD_VEH,Automotive,Comunicaciones y transportes > Industria automotriz > Producción de vehículos automotores > Total,Tradicional,1,1,1
+OCUP_HOT,Hotel,"Ocupación hotelera en corredores y agrupamientos, corte mensual. DataTur",Tradicional,1,1,0
+GASOLINAS,Gas,NA,Alta frecuencia,1,1,0
+IMSS,IMSS,NA,Tradicional,1,1,1
+REMESAS,Remmitances,"Remesas Familiares, Total",Tradicional,1,1,0
+MOVILIDAD,Mobility,NA,No tradicional,0,0,0
+M4,M4,"Agregados Monetarios, M4",Tradicional,1,0,0
+X,X,Indicadores económicos de coyuntura > Balanza comercial de mercancías de México > Series desestacionalizadas y tendencia-ciclo > Exportaciones (FOB) > Total > Serie desestacionalizada Valores absolutos r1 / o1 / f18/ (Millones de dólares) ,Tradicional,0,1,0
+PEDIDOS_MANU,PMI,Indicadores económicos de coyuntura> Encuesta mensual de opinión empresarial (EMOE). Serie 2013> Sector manufacturero> Series desestacionalizadas y tendencia-ciclo> Indicador de pedidos manufactureros y sus componentes> Indicador de pedidos manufactureros> Serie desestacionalizada> Índice,Tradicional,0,1,1
+IGAE,IGAE,"Indicadores económicos de coyuntura> Indicador global de la actividad económica, base 2013> Series desestacionalizadas y tendencia-ciclo> Total> Serie desestacionalizada> Índice",Tradicional,0,0,0
+TARJETAS,Cards,NA,Tradicional,1,1,1
+SPEI,SPEI,NA,Tradicional,1,1,1
+IMEF,IMEF,NA,Tradicional,0,0,0
+INPC,Prices,Indicadores económicos de coyuntura> Índices de precios> Índice nacional de precios al consumidor. Base segunda quincena de julio de 2018=100> Mensual> Índice> Índice general,Tradicional,1,1,0
+SATELITES,Satellites,Datos Indicador Cambio Imágenes Satelitales,No tradicional,1,0,0
+PRECIO,Oil price,NA,Tradicional,0,0,0
+U_US,U USA,,Tradicional,0,1,1
+TOTAL_NONFARM,U Nonfarm,,Tradicional,0,0,0
+TOTAL_CONSTR,U Constr,,Tradicional,0,0,0
+TOTAL_MANUF,U Manuf,,Tradicional,0,0,0
+TOTAL_SERV,U Serv,,Tradicional,0,0,0
+MANUF_USA,Manuf USA,,Tradicional,0,1,1

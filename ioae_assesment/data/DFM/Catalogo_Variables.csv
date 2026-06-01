@@ -1,0 +1,86 @@
+Modelo,var_type,Pagina
+IAI,macro,Produccion industrial
+ISBSVM,macro,Ventas al menudeo
+TDU,macro,Desocupacion
+M,macro,Importaciones
+CONF_CONS,macro,Confianza-construccion
+CONF_MAN,macro,Confianza-manufacturas
+CONF_COM,macro,Confianza-comercio
+CONF_SERV,macro,Confianza-servicios
+T_EMP_MAN,macro,Empleo de manufacturas
+IPC,financial,BMV
+TC,financial,Tipo de cambio
+TIIE_28,financial,TIIE 28
+SP_500,financial,SP 500
+IPI_EUA,macro,Produccion industrial-EUA
+ANTAD,macro,ANTAD
+PROD_VEH,macro,Produccion de vehiculos
+OCUP_HOT,macro,Ocupacion hotelera
+GASOLINAS,macro,Combustibles-SENER
+IMSS,macro,IMSS
+REMESAS,macro,Remesas
+MOVILIDAD,attention_and_behavior,Movilidad twitter
+M4,macro,M4
+X,macro,Exportaciones
+PEDIDOS_MANU,macro,Pedidos manufactureros
+IGAE,macro,IGAE
+TARJETAS,financial,Tarjetas bancarias
+SPEI,financial,SPEI
+IMEF,macro,IMEF
+INPC,macro,Indice Nacional de Precios al Consumidor
+SATELITES,attention_and_behavior,Datos Indicador Cambio Imagenes Satelitales
+PRECIO,financial,Precio del petroleo
+U_US,macro,Desempleo Estados Unidos
+TOTAL_NONFARM,macro,Empleados totales EUA
+TOTAL_CONSTR,macro,Empleados construccion EUA
+TOTAL_MANUF,macro,Empleados manufacturas EUA
+TOTAL_SERV,macro,Empleados servicios EUA
+MANUF_USA,macro,Indice de manufacturas EUA
+AH1N1,attention_and_behavior,AH1N1-Google
+AMLO,attention_and_behavior,AMLO-Google
+Ayotzinapa,attention_and_behavior,Ayotzinapa-Google
+Calderon,attention_and_behavior,Calderon-Google
+Cartel,attention_and_behavior,Cartel-Google
+Casa Blanca,attention_and_behavior,Casa Blanca-Google
+Chapo,attention_and_behavior,Chapo-Google
+China,attention_and_behavior,China-Google
+Coronavirus,attention_and_behavior,Coronavirus-Google
+Corrupcion,attention_and_behavior,Corrupcion-Google
+Crisis economica,attention_and_behavior,Crisis economica-Google
+Crisis sanitaria,attention_and_behavior,Crisis sanitaria-Google
+Cuarentena,attention_and_behavior,Cuarentena-Google
+Cubrebocas,attention_and_behavior,Cubrebocas-Google
+Desempleo,attention_and_behavior,Desempleo-Google
+Dolar,attention_and_behavior,Dolar-Google
+Elecciones,attention_and_behavior,Elecciones-Google
+EPN,attention_and_behavior,EPN-Google
+Gasolina,attention_and_behavior,Gasolina-Google
+Homicidios,attention_and_behavior,Homicidios-Google
+Huachicol,attention_and_behavior,Huachicol-Google
+Inflacion,attention_and_behavior,Inflacion-Google
+Inseguridad,attention_and_behavior,Inseguridad-Google
+Mascarilla N95,attention_and_behavior,Mascarilla N95-Google
+Medidas economicas,attention_and_behavior,Medidas economicas-Google
+Migracion,attention_and_behavior,Migracion-Google
+Migrantes,attention_and_behavior,Migrantes-Google
+Morena,attention_and_behavior,Morena-Google
+Muertos,attention_and_behavior,Muertos-Google
+Muro,attention_and_behavior,Muro-Google
+Omicron,attention_and_behavior,Omicron-Google
+Outsourcing,attention_and_behavior,Outsourcing-Google
+Pacto,attention_and_behavior,Pacto-Google
+PAN,attention_and_behavior,PAN-Google
+Pandemia,attention_and_behavior,Pandemia-Google
+PEMEX,attention_and_behavior,PEMEX-Google
+Peso,attention_and_behavior,Peso-Google
+Petroleo,attention_and_behavior,Petroleo-Google
+PRI,attention_and_behavior,PRI-Google
+Rebrote,attention_and_behavior,Rebrote-Google
+Recesion,attention_and_behavior,Recesion-Google
+Reformas,attention_and_behavior,Reformas-Google
+Salario,attention_and_behavior,Salario-Google
+Sismo,attention_and_behavior,Sismo-Google
+Tipo de cambio,attention_and_behavior,Tipo de cambio-Google
+Trump,attention_and_behavior,Trump-Google
+Vacuna,attention_and_behavior,Vacuna-Google
+Violencia,attention_and_behavior,Violencia-Google
